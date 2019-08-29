@@ -27,17 +27,8 @@ class String
   end
 
   def count_sentences
-    counter = 0
-    string = self.split
-    string.each do |word|
-      if word.include?(".")
-        counter +=1
-      elsif word.include?("?")
-        counter += 1
-      elsif word.include?("!")
-        counter += 1
-      end 
-    end 
-    return counter
+   string = self.split(/[.!?]/)
+   string.delete("")
+   string.length
   end
 end
