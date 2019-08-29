@@ -27,19 +27,6 @@ class String
   end
 
   def count_sentences
-    counter = 0
-    string = "This, well, is a sentence. This is too!! And so is this, I think? Woo..."
-    binding.pry
-    string = self.split
-    string.each do |word|
-      if word.include?(".")
-        counter +=1
-      elsif word.include?("?")
-        counter += 1
-      elsif word.include?("!")
-        counter += 1
-      end 
-    end 
-    return counter
+    self.split(/[.!?]/).delete("").length
   end
 end
