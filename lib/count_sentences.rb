@@ -28,6 +28,8 @@ class String
 
   def count_sentences
     counter = 0
+    string = 
+    binding.pry
     string = self.split
     binding.pry
     string.each do |word|
