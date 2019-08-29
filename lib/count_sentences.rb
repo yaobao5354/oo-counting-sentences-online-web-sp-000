@@ -29,6 +29,7 @@ class String
   def count_sentences
     counter = 0
     string = self.split
+    binding.pry
     string.each do |word|
       if word.include?(".")
         counter +=1
